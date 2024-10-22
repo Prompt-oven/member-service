@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: member-manage-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  mail:
+    password: test
+    username: test
+
+server:
+  port: 0 # random port for security reasons
+  shutdown: graceful
+
+logging:
+  level:
+    org.springframework.jdbc: DEBUG
+    org.springframework.transaction: DEBUG
+    org.springframework.orm.jpa: DEBUG
