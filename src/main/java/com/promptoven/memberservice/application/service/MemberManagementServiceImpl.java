@@ -3,7 +3,7 @@ package com.promptoven.memberservice.application.service;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-import org.springframework.security.core.parameters.P;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,7 +23,7 @@ public class MemberManagementServiceImpl implements MemberManagementUseCases {
 
 	private final MemberPersistence memberPersistence;
 	private final RolePersistence rolePersistence;
-	private final PasswordEncoder passwordEncoder;
+	private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(13);
 
 
 	@Override
