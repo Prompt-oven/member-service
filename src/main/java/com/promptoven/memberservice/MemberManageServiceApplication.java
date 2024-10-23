@@ -6,6 +6,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
 public class MemberManageServiceApplication {
